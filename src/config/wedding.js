@@ -12,7 +12,7 @@ export const wedding = {
   groom: 'Shubham',
   monogram: 'L | S',
 
-  year: null, // e.g. 2027 — CONFIRM BEFORE SHARING
+  year: 2027,
 
   // Shown under the names on the card.
   families: 'Together with our families',
