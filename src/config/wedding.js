@@ -27,8 +27,8 @@ export const wedding = {
       time: null,        // e.g. '7:00 PM onwards'
       startTime: null,   // 24h 'HH:MM' for the calendar, e.g. '19:00'
       durationHours: 4,
-      venue: null,       // e.g. 'The Leela Palace'
-      address: null,     // e.g. 'Diplomatic Enclave, Chanakyapuri, New Delhi'
+      venue: 'World Square Mall',
+      address: 'Main Grand Trunk Road, Delhi',
       mapsUrl: null,     // optional exact Google Maps link; otherwise venue + address is searched
     },
     {
@@ -40,8 +40,8 @@ export const wedding = {
       time: null,
       startTime: null,
       durationHours: 6,
-      venue: null,
-      address: null,
+      venue: 'World Square Mall',
+      address: 'Main Grand Trunk Road, Delhi',
       mapsUrl: null,
     },
   ],
