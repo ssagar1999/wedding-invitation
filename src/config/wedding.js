@@ -25,7 +25,7 @@ export const wedding = {
     host: 'Dr. Meenakshi Bhargava',
     hostLine: ['requests the honor of your presence', 'at the wedding of her beloved daughter'],
     brideParents: ['daughter of Dr. Meenakshi Bhargava', 'and Late Shri Nirbhay Kumar Bhargava'],
-    groomParents: ['son of Smt. Sudesh Sagar', 'and Shri Praveep Sagar'],
+    groomParents: ['son of Smt. Sudesh Sagar', 'and Shri Praveen Sagar'],
     dateLine: '15th & 16th February 2027',
   },
 
