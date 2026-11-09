@@ -1,50 +1,50 @@
 import React from 'react';
-import { Corner, Divider, Mandala, OmMedallion, Vine } from '../ornaments/Ornaments.jsx';
+import { Corner, Divider, Mandala, Vine } from '../ornaments/Ornaments.jsx';
+import Ganesha from '../ornaments/Ganesha.jsx';
 import Reveal from './Reveal.jsx';
 
 /* The main card — designed like layered physical stationery. */
 export default function InvitationCard({ wedding }) {
-  const yr = wedding.year ? ` · ${wedding.year}` : '';
+  const c = wedding.card;
   return (
     <section className="section card-section" id="invitation">
       <Reveal className="card">
         <div className="card-frame">
-          {['tl', 'tr', 'bl', 'br'].map((c) => <Corner key={c} className={`corner ${c}`} />)}
+          {['tl', 'tr', 'bl', 'br'].map((k) => <Corner key={k} className={`corner ${k}`} />)}
           <div className="card-inner">
             <Mandala className="card-mandala" />
 
             <div className="card-head">
-              <p className="deva">॥ श्री गणेशाय नमः ॥</p>
-              <OmMedallion size={92} className="om" />
-              <p className="eyebrow">With the blessings of Lord Ganesha</p>
+              <Ganesha size={104} className="ganesha" />
+              <p className="shloka deva">
+                {c.shloka.map((l, i) => <span key={i}>{l}</span>)}
+              </p>
             </div>
 
-            <Vine className="vine" width={240} />
+            <Vine className="vine" width={220} />
 
-            <p className="families">{wedding.families}</p>
+            <p className="eyebrow blessings-intro">{c.blessingsIntro}</p>
+            <ul className="elders">
+              {c.blessings.map((b) => <li key={b}>{b}</li>)}
+            </ul>
 
-            <h2 className="names" aria-label={`${wedding.bride} and ${wedding.groom}`}>
-              <span className="name gold-text">{wedding.bride}</span>
-              <span className="amp script">&amp;</span>
-              <span className="name gold-text">{wedding.groom}</span>
-            </h2>
+            <Divider />
 
-            <p className="invite-line">invite you to celebrate<br />the beginning of their forever.</p>
+            <p className="host gold-text">{c.host}</p>
+            <p className="host-line">{c.hostLine.map((l, i) => <span key={i}>{l}</span>)}</p>
+
+            <div className="names" aria-label={`${wedding.bride} with ${wedding.groom}`}>
+              <h2 className="name gold-text">{wedding.bride}</h2>
+              <p className="parents">{c.brideParents.map((l, i) => <span key={i}>{l}</span>)}</p>
+              <span className="amp script">with</span>
+              <h2 className="name gold-text">{wedding.groom}</h2>
+              <p className="parents">{c.groomParents.map((l, i) => <span key={i}>{l}</span>)}</p>
+            </div>
 
             <Divider variant="lotus" />
 
-            <div className="card-dates">
-              {wedding.events.map((ev, i) => (
-                <React.Fragment key={ev.id}>
-                  {i > 0 && <span className="cd-sep" aria-hidden="true" />}
-                  <div className="cd">
-                    <span className="cd-day">{ev.day}</span>
-                    <span className="cd-mon">February{yr}</span>
-                    <span className="cd-title">{ev.title}</span>
-                  </div>
-                </React.Fragment>
-              ))}
-            </div>
+            <p className="date-line">{c.dateLine}</p>
+            <p className="date-sub">{wedding.events.map((e) => e.title).join(' & ')}</p>
           </div>
         </div>
       </Reveal>

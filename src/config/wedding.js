@@ -14,8 +14,20 @@ export const wedding = {
 
   year: 2027,
 
-  // Shown under the names on the card.
-  families: 'Together with our families',
+  // Text on the main invitation card.
+  card: {
+    shloka: ['वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।', 'निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥'],
+    blessingsIntro: 'With the heavenly blessings of',
+    blessings: [
+      'Late Smt. Sarla Devi & Late Shri Damodar Lal Bhargava',
+      'Late Smt. Kusum & Late Dr. Ramakant Bhargava',
+    ],
+    host: 'Dr. Meenakshi Bhargava',
+    hostLine: ['requests the honor of your presence', 'at the wedding of her beloved daughter'],
+    brideParents: ['daughter of Dr. Meenakshi Bhargava', 'and Late Shri Nirbhay Kumar Bhargava'],
+    groomParents: ['son of Smt. Sudesh Sagar', 'and Shri Praveep Sagar'],
+    dateLine: '15th & 16th February 2027',
+  },
 
   events: [
     {
