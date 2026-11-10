@@ -9,6 +9,7 @@ import PhotoArch from './components/PhotoArch.jsx';
 import Countdown from './components/Countdown.jsx';
 import EventCard from './components/EventCard.jsx';
 import Closing from './components/Closing.jsx';
+import Compliments from './components/Compliments.jsx';
 import MusicToggle from './components/MusicToggle.jsx';
 import Reveal from './components/Reveal.jsx';
 import Games from './games/Games.jsx';
@@ -67,6 +68,7 @@ export default function App() {
         </section>
 
         <Countdown wedding={wedding} />
+        <Compliments wedding={wedding} />
         {wedding.games && <Games />}
         <Closing wedding={wedding} />
       </motion.main>

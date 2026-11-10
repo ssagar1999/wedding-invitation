@@ -75,6 +75,39 @@ export const wedding = {
     message: "You're invited! 💍 Lakshita & Shubham — Ring Ceremony on 15 February and Wedding on 16 February. Open the invitation:",
   },
 
+  // "With best compliments from" — each couple is [first name, second name].
+  compliments: {
+    intro: 'With best compliments from',
+    sides: [
+      {
+        title: 'Paternal Side',
+        couples: [
+          ['Smt Usha', 'Shri V.K. Bhargava'],
+          ['Dr Sunita', 'Dr P.K. Bhargava'],
+          ['Smt Archana', 'Shri Vichitra Bhargava'],
+          ['Smt Renu', 'Shri Sanjay Bhargava'],
+          ['Priya', 'Sunny Bhargava'],
+          ['Anshika', 'Piyush Bhargava'],
+          ['Neha', 'Gaurav Bhargava'],
+        ],
+        others: [
+          ['Pooja', 'Dr Harsh', 'Rajat', 'Sanchit', 'Sankalp'],
+          ['Ansh', 'Yuvi', 'Yashvi'],
+        ],
+      },
+      {
+        title: 'Maternal Side',
+        couples: [
+          ['Dr Sangeeta', 'Dr Suresh Bhargava'],
+          ['Smt Priti', 'Shri Pankaj Bhargava'],
+          ['Smt Nupur', 'Shri Raghav Bhargava'],
+          ['Smt Kanchan', 'Raghu Devarakonda'],
+        ],
+        others: [],
+      },
+    ],
+  },
+
   closing: {
     line: 'Your presence will make our celebration even more special.',
   },
